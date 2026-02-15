@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+
+  background:
+    linear-gradient(
+      rgba(8, 30, 20, 0.88),
+      rgba(4, 15, 10, 0.95)
+    ),
+    url("https://i.pinimg.com/736x/70/d7/62/70d7620b3acc96667ebd6999bf5b4698.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  color: #f0fff4;
+  min-height: 100vh;
+}
+
+/* ================= HERO LAYOUT ================= */
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 80px 120px;
+  gap: 120px;
+}
+
+/* ================= LEFT TEXT ================= */
+
+.hero-text {
+  max-width: 550px;
+}
+
+.hero-text h1 {
+  font-size: 5.2rem;          /* Bigger headline */
+  line-height: 1.05;
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.hero-text h1 span {
+  color: #6ee7b7;
+  text-shadow: 0 0 30px rgba(110, 231, 183, 0.35);
+}
+
+.hero-text p {
+  margin-top: 35px;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #d1fae5;
+  max-width: 500px;
+}
+
+.hero-text a {
+  display: inline-block;
+  margin-top: 35px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #6ee7b7;
+  text-decoration: none;
+}
+
+.hero-text a:hover {
+  text-decoration: underline;
+}
+
+/* ================= GLASS CARD ================= */
+
+.card {
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(18px);
+  border-radius: 24px;
+  padding: 45px;
+  width: 480px;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  box-shadow: 0 25px 60px rgba(0,0,0,0.7);
+
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card h2 {
+  margin-top: 0;
+  font-weight: 600;
+}
+
+/* ================= FORM ELEMENTS ================= */
+
+.card label {
+  display: block;
+  margin-top: 25px;
+  font-weight: 500;
+  color: #c7f9cc;
+}
+
+.card input,
+.card select {
+  width: 100%;
+  margin-top: 10px;
+  padding: 16px;
+  border-radius: 14px;
+  border: none;
+  font-size: 1rem;
+
+  background-color: rgba(255,255,255,0.95);
+  color: #111;
+  font-weight: 500;
+}
+
+/* Fix dropdown rendering */
+.card select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+select option {
+  background: #ffffff;
+  color: #000000;
+}
+
+.card input::placeholder {
+  color: #666;
+}
+
+.card input:focus,
+.card select:focus {
+  outline: none;
+  background-color: #ffffff;
+}
+
+/* ================= BUTTON ================= */
+
+.card button {
+  margin-top: 40px;
+  width: 100%;
+  padding: 18px;
+  border-radius: 18px;
+  border: none;
+
+  background: linear-gradient(135deg, #34d399, #22c55e);
+  color: #032e1c;
+
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+
+  box-shadow: 0 12px 30px rgba(34, 197, 94, 0.45);
+  transition: all 0.3s ease;
+}
+
+.card button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px rgba(34, 197, 94, 0.6);
+}
+
+/* ================= RESULT SECTION ================= */
+
+.result {
+  margin-top: 40px;
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(0,0,0,0.6);
+  text-align: center;
+}
+
+.result h2 {
+  margin: 0;
+  font-size: 3.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.result span {
+  display: block;
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #9ef0c1;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 40px;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .hero-text h1 {
+    font-size: 3.5rem;
+  }
+}

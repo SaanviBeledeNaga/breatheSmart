@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Carbon Footprint</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/script.js"></script>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-text">
+    <h1>Your <span>Impact.</span></h1>
+    <p>
+      Understand how your daily activities contribute to
+      carbon emissions — and how to reduce them.
+    </p>
+
+    <br>
+    <a href="/">← Back to AQI Predictor</a>
+  </div>
+
+  <div class="card">
+    <label>Distance travelled (km)</label>
+    <input id="distance" placeholder="e.g. 50">
+
+    <label>Mode of transport</label>
+    <select id="mode">
+      <option value="car">Car</option>
+      <option value="bus">Bus</option>
+      <option value="train">Train</option>
+      <option value="bike">Bike</option>
+    </select>
+
+    <button onclick="calculateCarbon()">Calculate Footprint</button>
+
+    <div class="result">
+      <h2 id="carbonResult">—</h2>
+      <ul id="suggestions"></ul>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

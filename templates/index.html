@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BreatheSmart</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/script.js"></script>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-text">
+    <h1>Save <span>Air.</span><br>Save <span>Life.</span></h1>
+    <p>
+      Predict tomorrow’s air quality and take informed decisions
+      for a cleaner, healthier future.
+    </p>
+
+    <br>
+    <a href="/carbon">Check your carbon footprint →</a>
+  </div>
+
+  <div class="card">
+    <label>City</label>
+      <select id="city">
+  <option value="Delhi">Delhi</option>
+  <option value="Mumbai">Mumbai</option>
+  <option value="Chennai">Chennai</option>
+  <option value="Kolkata">Kolkata</option>
+  <option value="Bangalore">Bangalore</option>
+    </select>
+
+    <label>Air Quality</label>
+    <p style="color:#a7f3d0;font-size:0.9rem">
+      Data is fetched automatically
+    </p>
+
+    
+<button onclick="predictAQI()">Predict Tomorrow’s AQI</button>
+
+    <div class="result">
+      <h2 id="aqiResult">—</h2>
+      <span>Predicted AQI</span>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
