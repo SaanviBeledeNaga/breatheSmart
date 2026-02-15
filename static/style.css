@@ -28,11 +28,13 @@ body {
 .hero {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   min-height: 100vh;
-  padding: 80px 120px;
-  gap: 120px;
+  padding: 80px 8%;
+  gap: 60px;
+  flex-wrap: wrap;
 }
+
 
 /* ================= LEFT TEXT ================= */
 
@@ -216,23 +218,20 @@ select option {
   }
 }
 
-/* ================= MOBILE FIX ================= */
-
-@media (max-width: 768px) {
+@media (max-width: 900px) {
 
   .hero {
     flex-direction: column;
-    padding: 40px 20px;
-    gap: 50px;
     text-align: center;
+    padding: 40px 20px;
   }
 
   .hero-text {
-    max-width: 100%;
+    width: 100%;
   }
 
   .hero-text h1 {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     line-height: 1.2;
   }
 
@@ -243,12 +242,11 @@ select option {
   .card {
     width: 100%;
     max-width: 100%;
-    padding: 30px;
+    padding: 25px;
   }
 
   .result h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
-
 }
 
